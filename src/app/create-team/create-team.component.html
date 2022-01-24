@@ -1,0 +1,38 @@
+<div class="header"><h1>Fill in team fields</h1></div>
+<form class="center" [formGroup]="teamForm">
+	<div class="container">
+		<mat-form-field class="example-full-width" appearance="outline">
+		    <mat-label>Name</mat-label>
+		    <input matInput placeholder="Team name" value="" formControlName="name">
+		</mat-form-field>
+		<mat-form-field class="example-full-width" appearance="outline">
+		    <mat-label>Goals for</mat-label>
+		    <input matInput placeholder="Team goals for" value="" formControlName="goals_for">
+		</mat-form-field>
+		<mat-form-field class="example-full-width" appearance="outline">
+		    <mat-label>Goals against</mat-label>
+		    <input matInput placeholder="Team goals against" value="" formControlName="goals_against">
+		</mat-form-field>
+	</div>
+	<div>
+		<mat-form-field class="example-full-width" appearance="outline">
+		    <mat-label>Wins</mat-label>
+		    <input matInput placeholder="Team wins" value="" formControlName="wins">
+		</mat-form-field>
+		<mat-form-field class="example-full-width" appearance="outline">
+		    <mat-label>Losses</mat-label>
+		    <input matInput placeholder="Team losses" value="" formControlName="losses">
+		</mat-form-field>
+		<mat-form-field class="example-full-width" appearance="outline">
+		    <mat-label>Value</mat-label>
+		    <input matInput placeholder="Team value" value="" formControlName="value">
+		</mat-form-field>
+	</div>
+	<div>
+		<mat-form-field class="example-full-width" appearance="outline">
+		    <mat-label>Points</mat-label>
+		    <input matInput placeholder="Team points" value="" formControlName="points">
+		</mat-form-field>		
+	</div>
+	<button mat-raised-button color="primary" (click)="submit()">Submit</button>
+</form>

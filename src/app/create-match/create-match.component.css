@@ -1,0 +1,41 @@
+.demo-inline-calendar-card {
+  width: 300px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top:  30px;
+}
+
+.example-full-width {
+  width: 300px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.container {
+  width: 500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: ;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ml-80 {
+  margin-left: 80px;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+.ml-160 {
+  margin-left: 160px;
+}

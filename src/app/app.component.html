@@ -1,0 +1,14 @@
+<mat-toolbar>
+    <span>Epl predictions</span>
+    <span class="example-spacer"></span>
+    <div *ngIf="!username">
+	    <a mat-flat-button color="primary" class="button-margin" routerLink="/login" routerLinkActive="active">Login</a>
+	    <a mat-flat-button color="primary" class="button-margin" routerLink="/register" routerLinkActive="active">Register</a>
+	</div>
+	<div *ngIf="username">
+		<span *ngIf="username">{{username}}</span>
+		<button mat-flat-button color="primary" *ngIf="isAdmin" class="button-margin" routerLink="/users" routerLinkActive="active">users</button>
+		<button mat-flat-button color="primary" class="button-margin" (click)="logout()">logout</button>
+	</div>
+  </mat-toolbar>
+<router-outlet></router-outlet>

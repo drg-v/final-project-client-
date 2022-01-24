@@ -1,0 +1,24 @@
+<div class="header"><h1>Choose time range</h1></div>
+
+<div class="container">
+	<div class="element">
+		<button class="mb30" mat-raised-button color="warn" (click)="selectAll()">Select all matches</button>
+		<button class="mb30" mat-raised-button color="warn" (click)="selectByRange()">Select matches by time range</button>
+		<button class="mb30" mat-raised-button color="warn" routerLink="/matches/create" routerLinkActive="active">Add new match</button>
+	</div>
+	<div class="element">
+		<mat-card class="demo-inline-calendar-card">
+		  <mat-calendar [(selected)]="startDate"></mat-calendar>
+		</mat-card>
+		<br>
+	</div>
+	<div class="element">
+		<mat-card class="demo-inline-calendar-card">
+		  <mat-calendar [(selected)]="endDate"></mat-calendar>
+		</mat-card>
+		<br>
+	</div>
+</div>
+
+<app-matches *ngIf="matches.length != 0" [match_arr]="matches"></app-matches>
+

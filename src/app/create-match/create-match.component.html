@@ -1,0 +1,29 @@
+<div class="header"><h1>Fill in match fields</h1></div>
+<form class="center" [formGroup]="matchForm">
+	<div class="container">
+		<mat-form-field appearance="outline" class="example-full-width">
+		    <mat-label>Home team</mat-label>
+		    <mat-select formControlName="home" name="food">
+		      <mat-option *ngFor="let team of teams" [value]="team.id_">
+		        {{team.name}}
+		      </mat-option>
+		    </mat-select>
+		</mat-form-field>
+		<mat-form-field appearance="outline" class="example-full-width">
+		    <mat-label>Away team</mat-label>
+		    <mat-select formControlName="away" name="food">
+		      <mat-option *ngFor="let team of teams" [value]="team.id_">
+		        {{team.name}}
+		      </mat-option>
+		    </mat-select>
+		</mat-form-field>
+	</div>
+	<div class="container">
+		<mat-card class="demo-inline-calendar-card ml-80">
+		  <mat-calendar [(selected)]="date"></mat-calendar>
+		</mat-card>
+	</div>
+	<div class="container mt-30 ml-160">
+		<button mat-raised-button color="primary" (click)="submit()">Submit</button>
+	</div>
+</form>

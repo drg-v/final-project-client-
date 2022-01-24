@@ -1,0 +1,31 @@
+<div class="container" *ngIf="matches.length != 0">
+	<div class="item">		
+		<mat-list role="list">
+			<mat-list-item role="listitem">
+		  	<h1 class="name">Home</h1>
+		  	<h1 class="name">Away</h1>
+		  	<span>Match Date</span>
+		  	<mat-divider></mat-divider>
+		  </mat-list-item>
+		  <div *ngFor="let match of matches">
+		  <mat-list-item role="listitem">
+		  	<h1 class="name">{{match.teams[0].name}}</h1>
+		  	<h1 class="name">{{match.teams[1].name}}</h1>
+		  	<span>{{match.date.slice(0, -5)}}</span>
+		  	<button mat-raised-button color="primary" (click)="predict(match.id_)">Predict</button>
+		  	<button class="ml-30" mat-raised-button color="accent" (click)="delete(match.id_)">Delete</button>
+		  	<mat-divider></mat-divider>
+		  </mat-list-item>
+		  <mat-list-item *ngIf="match.prediction" role="listitem">
+			  	<h1 class="name">Home win:</h1>
+			  	<h1 class="name">{{match.prediction[0]}}</h1>
+			  	<h1 class="name">Away win:</h1>
+			  	<h1 class="name">{{match.prediction[1]}}</h1>
+			  	<h1 class="prediction-name">Draw:</h1>
+			  	<h1 class="name">{{match.prediction[2]}}</h1>
+			  	<mat-divider></mat-divider>
+		  </mat-list-item>
+		</div>
+		</mat-list>
+	</div>
+</div>
